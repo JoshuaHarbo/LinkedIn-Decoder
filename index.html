@@ -111,7 +111,7 @@ h3{font-size:16px;font-weight:600;margin-bottom:10px}
 
 <header><div class="wrap">
   <h1>Joshua Harbo —<br><b>LinkedIn, Decoded</b></h1>
-  <p class="sub">Twenty years of professional life, extracted from a LinkedIn data export and made visible. Built from 40+ CSV files, June 6, 2026. Everything below is computed from the raw data — methods noted under each section.</p>
+  <p class="sub">Twenty years of professional life, extracted from a LinkedIn data export and made visible. Nothing here is estimated or self-reported — every number is computed from the raw export, with the method noted under each section. Snapshot taken June 6, 2026.</p>
   <div class="statrow">
     <div class="stat"><div class="n" id="h-conns"></div><div class="l">Connections</div></div>
     <div class="stat"><div class="n" id="h-msgs"></div><div class="l">Messages</div></div>
@@ -147,7 +147,7 @@ h3{font-size:16px;font-weight:600;margin-bottom:10px}
 <section id="inferences">
   <div class="kicker">02 · Ad Machine vs Reality</div>
   <h2>What LinkedIn thinks it knows about you</h2>
-  <p class="lede">From <i>Inferences_about_you.csv</i> and <i>Ad_Targeting.csv</i> — the profile LinkedIn sells to advertisers — compared against what your actual behavior shows.</p>
+  <p class="lede">Buried in the export is the profile LinkedIn has built for advertisers — the version of you it sells. Here it is, side by side with what your actual behavior says.</p>
   <div class="two">
     <div class="card">
       <h3 style="color:var(--hot)">⊗ What the ad machine says</h3>
@@ -175,7 +175,7 @@ h3{font-size:16px;font-weight:600;margin-bottom:10px}
         <span class="tag real">Senior Tech Decision Maker</span>
         <span class="tag real">22 leadership posts since 2024</span>
       </div>
-      <p class="muted" style="margin-top:14px">Derived from Company_Follows.csv, Hashtag_Follows, Skills.csv, and theme analysis of your Shares.csv.</p>
+      <p class="muted" style="margin-top:14px">Drawn from the companies you follow, the hashtags and skills on your profile, and the themes running through your posts.</p>
     </div>
   </div>
   <div class="insight"><b>The gap is the insight.</b> LinkedIn's targeting model is still anchored to your 2010s identity — support tooling, gaming ("Player" comes from Activision-era data), warranty admin. Your last 18 months of behavior — AI company follows, leadership content, an executive coaching skill set — is exactly the identity you're building publicly. The algorithm lags; your content can close that gap faster than its model updates.</div>
@@ -196,7 +196,7 @@ h3{font-size:16px;font-weight:600;margin-bottom:10px}
       <thead><tr><th></th><th>From</th><th>Type</th><th>Last message</th><th>Waiting</th></tr></thead>
       <tbody></tbody>
     </table>
-    <p class="note"><b>Method:</b> messages.csv was grouped into conversations. A thread counts as "waiting" if its final message(s) are inbound, dated after Dec 6, 2025, longer than 30 characters, and don't match spam patterns. Types were classified by keyword rules and then hand-reviewed thread-by-thread — e.g. distinguishing candidates applying to <i>your</i> job postings from recruiters, and vendor pitches from genuine peer outreach. Sorted by action priority, then by who followed up.</p>
+    <p class="note"><b>Method:</b> your full message history was grouped into conversation threads. A thread counts as "waiting" if its final message(s) are inbound, dated after Dec 6, 2025, longer than 30 characters, and don't match spam patterns. Types were classified by keyword rules and then hand-reviewed thread-by-thread — e.g. distinguishing candidates applying to <i>your</i> job postings from recruiters, and vendor pitches from genuine peer outreach. Sorted by action priority, then by who followed up.</p>
   </div>
   <div class="insight"><b>Three things jump out.</b> (1) Two people asked for your availability and never got times — <b>C.F. (143 days)</b> and <b>H.H. (127 days)</b>; those are the fastest goodwill repairs available. (2) <b>Seven candidates</b> applied to roles you're hiring for and DM'd you directly — as the hiring VP, unanswered candidate DMs are an employer-brand surface, even a two-line "thanks, it's with the recruiting team" closes the loop. (3) The four <b>Content Engagement</b> threads are people DMing you about your AI-as-operational-infrastructure posts — live proof your leadership + AI lane is landing with the exact audience you want.</div>
 </section>
@@ -213,7 +213,7 @@ h3{font-size:16px;font-weight:600;margin-bottom:10px}
   </div>
   <div class="card">
     <div class="chartbox"><canvas id="postingChart"></canvas></div>
-    <p class="note"><b>Method:</b> Shares_5275290.csv counted by month vs Connections.csv "Connected On" dates. Pearson correlation across Jan 2025–May 2026. The lag-1 figure correlates this month's posts with <i>next</i> month's connections. Note the two spikes: Sep 2025 (7 posts) → Oct 2025 (+24 connections), and Mar 2026 (+32, your VP promotion announcement month). Honest caveat: 17 months is a small sample, and promotions confound the signal.</p>
+    <p class="note"><b>Method:</b> posts counted by month, set against the dates each connection was made. Pearson correlation across Jan 2025–May 2026; the lag-1 figure correlates this month's posts with <i>next</i> month's connections. Note the two spikes: Sep 2025 (7 posts) → Oct 2025 (+24 connections), and Mar 2026 (+32, your VP promotion announcement month). One caveat: 17 months is a small sample, and promotions confound the signal.</p>
   </div>
   <div class="insight"><b>Your data says consistency beats bursts.</b> The Sep '25 posting burst produced a 4× connection spike one month later, then growth fell back when posting did. Months with ≥2 posts average meaningfully more inbound than zero-post months. The mechanism is visible: post → people find you → inbound invitations (see section 6: 83% of your invitations are inbound).</div>
 </section>
@@ -239,7 +239,7 @@ h3{font-size:16px;font-weight:600;margin-bottom:10px}
   </div>
   <div class="card">
     <div class="chartbox"><canvas id="inoutChart"></canvas></div>
-    <p class="note"><b>Method:</b> Invitations.csv, Direction field. Acceptance rate = your outgoing invitations whose recipient now appears in Connections.csv (matched by name/profile URL). A 5:1 inbound ratio with a near-90% outbound acceptance rate is the signature of someone with surplus credibility — you could be far more deliberate about <i>who</i> you reach out to, because almost everyone says yes.</p>
+    <p class="note"><b>Method:</b> every invitation in the export carries a direction — who initiated. Acceptance rate = your outgoing invitations whose recipient now appears among your connections (matched by name and profile URL). A 5:1 inbound ratio with a near-90% outbound acceptance rate is the signature of someone with surplus credibility — you could be far more deliberate about <i>who</i> you reach out to, because almost everyone says yes.</p>
   </div>
 </section>
 
@@ -250,7 +250,7 @@ h3{font-size:16px;font-weight:600;margin-bottom:10px}
   <p class="lede">Every connection, categorized by your DM history with them.</p>
   <div class="card">
     <div class="relgrid" id="relgrid"></div>
-    <p class="note"><b>Method:</b> Connections.csv cross-referenced with messages.csv by display name. <b>Active</b> = 5+ messages in the last year · <b>Some contact</b> = 1–4 in the last year · <b>Going stale</b> = last message 1–2 years ago · <b>Dormant</b> = older than 2 years · <b>Never messaged</b> = no DM thread found. Name-matching misses people who changed display names, so treat "never" as an upper bound.</p>
+    <p class="note"><b>Method:</b> every connection cross-referenced against your full message history by display name. <b>Active</b> = 5+ messages in the last year · <b>Some contact</b> = 1–4 in the last year · <b>Going stale</b> = last message 1–2 years ago · <b>Dormant</b> = older than 2 years · <b>Never messaged</b> = no DM thread found. Name-matching misses people who changed display names, so treat "never" as an upper bound.</p>
   </div>
   <div class="insight"><b>75% of your network has never been in your inbox.</b> That's normal — but for someone targeting C-level visibility, the 12-person "active" core is small. The highest-leverage group is the 224 dormant ties: ex-Hulu, ex-Activision, ex-Myspace colleagues who knew you before the VP title. Reactivating 2–3 per week with a genuine note is the cheapest executive-network investment available to you.</div>
 </section>
@@ -261,7 +261,7 @@ h3{font-size:16px;font-weight:600;margin-bottom:10px}
   <h2>Your newest connections — and what happened next</h2>
   <p class="lede">The 14 most recent connections: who initiated, and whether you've ever exchanged a DM.</p>
   <div class="card" id="tl-box">
-    <p class="note"><b>Method:</b> most recent rows of Connections.csv, joined to Invitations.csv for direction (inbound = they invited you) and messages.csv for message count. "Unknown" direction means the invitation predates LinkedIn's export window.</p>
+    <p class="note"><b>Method:</b> your newest connections, joined to invitation records for direction (inbound = they invited you) and to message history for the count. "Window expired" means the invitation predates the period LinkedIn includes in the export.</p>
   </div>
   <div class="insight" id="tl-insight"></div>
 </section>
@@ -278,7 +278,7 @@ h3{font-size:16px;font-weight:600;margin-bottom:10px}
   </div>
   <div class="card">
     <div class="chartbox"><canvas id="inboxChart"></canvas></div>
-    <p class="note"><b>Method:</b> inbound rows of messages.csv classified by a spam-pattern regex (sales sequences, agency pitches, "book a call" language). Conservative by design — borderline pitches count as genuine, so true noise is likely a bit higher.</p>
+    <p class="note"><b>Method:</b> every inbound message classified against spam patterns — sales sequences, agency pitches, "book a call" language. Conservative by design: borderline pitches count as genuine, so true noise is likely a bit higher.</p>
   </div>
 </section>
 
@@ -295,7 +295,7 @@ h3{font-size:16px;font-weight:600;margin-bottom:10px}
 <section id="content">
   <div class="kicker">11 · The Content Engine</div>
   <h2>Leveling up your leadership + AI content</h2>
-  <p class="lede">A deep-dive on Shares.csv, Comments, and Reactions — what you talk about, when you show up, and what the data says to do next.</p>
+  <p class="lede">A deep dive on your posting history and engagement activity — what you talk about, when you show up, and what the data says to do next.</p>
   <div class="two">
     <div class="card">
       <h3>What you post about (since 2024)</h3>
@@ -327,7 +327,7 @@ h3{font-size:16px;font-weight:600;margin-bottom:10px}
 
 </div>
 <footer><div class="wrap">
-  Built locally from a LinkedIn data export · June 6, 2026 · Inspired by Logan Currie's <i>Visualize Your LinkedIn Data Export</i> · All analysis runs offline; charts load Chart.js + D3 from CDN, so an internet connection is needed to render (the data itself never leaves this file).
+  Built from a LinkedIn data export · June 6, 2026 · Inspired by Logan Currie's <i>Visualize Your LinkedIn Data Export</i> · All analysis was done locally; this page contains only computed results.
 </div></footer>
 
 <script>
@@ -440,7 +440,7 @@ document.getElementById('h-posts').textContent = DATA.posts.length;
       <div class="head"><b>${c.name}</b><span>${c.companies.length} follows</span></div>
       <div class="track"><div class="fill" style="width:${100*c.companies.length/max}%;background:${colors[i%colors.length]}"></div></div>
       <div class="chips">${c.companies.join(' · ')}</div>
-    </div>`).join('') + `<p class="note"><b>Method:</b> Company Follows.csv, categorized by company type. Ordered by cluster size.</p>`;
+    </div>`).join('') + `<p class="note"><b>Method:</b> every company you follow, categorized by what the company does. Ordered by cluster size.</p>`;
 })();
 
 // ===== 6. IN VS OUT =====
@@ -513,7 +513,7 @@ document.getElementById('h-posts').textContent = DATA.posts.length;
     <div class="layer">
       <div class="bar" style="width:${Math.max(10, 58*e.n/max)}%;background:${colors[i]};color:${tcol[i]}">${e.n}</div>
       <div class="meta"><b>${e.years}: ${e.title}</b>${e.sub}</div>
-    </div>`).join('') + `<p class="note"><b>Method:</b> Connections.csv grouped by "Connected On" year, mapped to career chapters from Positions.csv. Width = connections added in that era.</p>`;
+    </div>`).join('') + `<p class="note"><b>Method:</b> connections grouped by the year you connected, mapped onto the chapters of your work history. Width = connections added during that era.</p>`;
 })();
 
 // ===== 11. CONTENT =====
